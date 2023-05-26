@@ -57,7 +57,7 @@ public class hw_03 {
 
         Thread.sleep(1000);
 
-        WebElement closepopup=driver.findElement(By.xpath("//img[@class=\"_8idr img\"]"));
+        WebElement closepopup=driver.findElement(By.xpath("(//button[text()='Sign Up'])[1]"));
         closepopup.click();
 
         Thread.sleep(2000);
