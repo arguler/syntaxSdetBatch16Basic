@@ -1,13 +1,11 @@
-package Utils;
+package Selenium_HomeWorks;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class CommonMethods {
-
+public class hw_12 {
     public static WebDriver driver;
 
     public static void openBrowserAndLaunchApplication(String url, String browser) {
@@ -36,7 +34,7 @@ public class CommonMethods {
         element.clear();
         element.sendKeys(text);
     }
-// Method for filling the dropdown list ***(HOMEWORK)***
+    // Method for filling the dropdown list ******(HOMEWORK)*********
     public static void dropdown(String fill, WebElement element) {
 
         Select sel = new Select(element);
@@ -45,4 +43,3 @@ public class CommonMethods {
     }
 
 }
-
