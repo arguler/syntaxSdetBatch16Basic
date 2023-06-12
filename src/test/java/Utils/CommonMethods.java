@@ -1,10 +1,12 @@
 package Utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
+import java.io.File;
+import java.io.IOException;
 
 public class CommonMethods {
 
@@ -42,6 +44,15 @@ public class CommonMethods {
         Select sel = new Select(element);
         sel.selectByVisibleText(fill);
 
+    }
+
+    //HW:
+//create a method in Common methods for screenshot
+//it should take file name as a parameter.
+    public static void screenshot(String fileName) throws IOException {
+        TakesScreenshot ts=(TakesScreenshot) driver;
+        File screenshot=ts.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("C:\\Users\\lenovoarg\\IdeaProjects\\syntaxSdetBatch16Basic\\screenshot\\"+fileName));
     }
 
 }
